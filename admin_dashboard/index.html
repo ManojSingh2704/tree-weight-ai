@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tree Weight AI Admin Dashboard</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --green: #176b3a;
+        --leaf: #2fa866;
+        --cream: #f7f3e8;
+        --ink: #193324;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, Arial, sans-serif;
+        background: var(--cream);
+        color: var(--ink);
+      }
+      header {
+        padding: 28px clamp(18px, 5vw, 72px);
+        background: linear-gradient(135deg, var(--green), var(--leaf));
+        color: white;
+      }
+      main {
+        padding: 28px clamp(18px, 5vw, 72px);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .card {
+        padding: 20px;
+        background: white;
+        border-radius: 18px;
+        box-shadow: 0 18px 48px rgba(25, 51, 36, .08);
+      }
+      strong {
+        display: block;
+        font-size: 32px;
+      }
+      table {
+        width: 100%;
+        margin-top: 18px;
+        border-collapse: collapse;
+        overflow: hidden;
+        background: white;
+        border-radius: 18px;
+      }
+      th, td {
+        padding: 14px;
+        border-bottom: 1px solid #e7eadf;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tree Weight AI Admin Dashboard</h1>
+      <p>Feedback learning, field scans, model accuracy and sync monitoring.</p>
+    </header>
+    <main>
+      <section class="grid">
+        <article class="card"><span>Total scans</span><strong id="scans">0</strong></article>
+        <article class="card"><span>Feedback records</span><strong id="feedback">0</strong></article>
+        <article class="card"><span>Average error</span><strong id="error">0 KG</strong></article>
+        <article class="card"><span>Model version</span><strong>v1</strong></article>
+      </section>
+      <table>
+        <thead>
+          <tr><th>Species</th><th>Predicted</th><th>Actual</th><th>Error</th><th>Farm</th></tr>
+        </thead>
+        <tbody id="rows">
+          <tr><td colspan="5">Connect this dashboard to the FastAPI / PostgreSQL feedback endpoint.</td></tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
