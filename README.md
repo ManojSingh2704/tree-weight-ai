@@ -44,6 +44,24 @@ flutter pub get
 flutter run
 ```
 
+## Free APK Build On GitHub
+
+This repository includes a GitHub Actions workflow:
+
+`.github/workflows/build-android-apk.yml`
+
+To build the APK for free:
+
+1. Open the repository on GitHub.
+2. Go to `Actions`.
+3. Select `Build Android APK`.
+4. Click `Run workflow`.
+5. After the build finishes, download `TreeWeightAI-release-apk` from the workflow artifacts.
+
+APK file inside artifact:
+
+`app-release.apk`
+
 If platform files need regeneration:
 
 ```bash
